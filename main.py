@@ -7,6 +7,7 @@ from tkinter import filedialog
 from pygame import mixer
 
 class Player:
+
     def __init__(self, root):
         root.geometry("400x200");root.iconbitmap(r"img/boombox.ico");root.title("TkinPlayer")
         # Creating a photoimage object to use image
@@ -38,7 +39,7 @@ class Player:
         Exit = Button(root, image=self.exitImg, command=root.destroy).place(x=30, y=165)
 
 
-        Label(root, text="SD", font=('Verdana', 11)).place(x=180, y=170)
+        #Label(root, text=texto, font=('Verdana', 11)).place(x=180, y=170)
 
     #///////////////////////////////////////////////////////////////////////////////
     #////////////////////////////////// Functions //////////////////////////////////
@@ -49,7 +50,7 @@ class Player:
 
     def load(self):
         self.music_file = filedialog.askopenfilename()
-        print(self.music_file)
+        texto = (self.music_file)
 
     def play(self):
         if self.music_file:
